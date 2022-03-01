@@ -14,5 +14,5 @@ function showText() {
     setTimeout(function () {
         $("#h3ScrollDown").removeClass('invisible');
         $("#imgDownArrow").removeClass('invisible');
-    }, 1000)
+    }, 2000)
 }
