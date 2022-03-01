@@ -1,0 +1,44 @@
+#sectionIntro {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#h1HiImRyan {
+    font-size: 10em;
+    animation: slideUp 1s ease-out;
+}
+
+#h2ShortDescription {
+    font-size: 2em;
+    animation: slideUp 1s ease-out .5s;
+}
+
+#h3ScrollDown {
+    position: absolute;
+    bottom: 20px;
+    margin-bottom: 0;
+    animation: slideUp 1s ease-out 1s;
+}
+
+#imgDownArrow {
+    height: 20px;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    animation: slideUp 1s ease-out 1s;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}

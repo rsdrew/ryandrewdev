@@ -1,0 +1,46 @@
+:root { --primaryColor: #d95c1a; --secondaryColor: #020122; }
+
+html, body { padding: 0; margin: 0; font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; /*overflow: hidden;*/ color: white; height: 100%; width: 100%; background-color: #d95c1a; scroll-behavior: smooth; text-align: center; }
+
+::-webkit-scrollbar { width: 7px; }
+
+::-webkit-scrollbar-track { background: #fff; }
+
+::-webkit-scrollbar-thumb { background: #020122; }
+
+a { color: #00B7FF; }
+
+button { font-size: 16px; letter-spacing: 2px; font-weight: 400 !important; background: transparent; color: #9590A8; padding: 23px 50px; text-align: center; display: inline-block !important; text-decoration: none; border: 3px solid #9590A8; width: max-content; cursor: pointer; transition: all 0.3s 0s ease-in-out; border-radius: 35px; }
+
+button:hover { background-color: #9590A8; color: white; text-decoration: none; }
+
+header { /* position: fixed; top: 0; */ background-image: linear-gradient(to top, rgba(2, 1, 34, 0), 30%, #020122); min-height: 100px; height: 20vh; width: 100%; max-width: 100vw; display: flex; align-items: center; justify-content: space-between; }
+
+.invisible { opacity: 0; }
+
+.visible { opacity: 1; }
+
+header { position: fixed; top: 0; }
+
+#imgProfilePicture { height: 100px; width: auto; margin-left: 5vw; }
+
+#btnContact { margin-right: 5vw; }
+
+#sectionIntro { height: 80vh; width: 100%; display: flex; align-items: center; flex-direction: column; }
+
+#h1HiImRyan { font-size: 10em; animation: slideUp 1s ease-out; }
+
+#h2ShortDescription { font-size: 2em; animation: slideUp 1s ease-out .5s; }
+
+#h3ScrollDown { position: absolute; bottom: 20px; margin-bottom: 0; animation: slideUp 1s ease-out 1s; }
+
+#imgDownArrow { height: 20px; width: auto; position: absolute; bottom: 0; animation: slideUp 1s ease-out 1s; }
+
+@keyframes slideUp { 0% { opacity: 0;
+    transform: translateY(100px); }
+  100% { opacity: 1;
+    transform: translateY(0%); } }
+
+#sectionAbout { background-color: #020122; height: fit-content; padding: 5vh 20vw; }
+
+.pAbout { font-size: 2em; line-height: 1.5; }
