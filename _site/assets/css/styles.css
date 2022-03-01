@@ -14,7 +14,8 @@ button { font-size: 16px; letter-spacing: 2px; font-weight: 400 !important; back
 
 button:hover { background-color: #9590A8; color: white; text-decoration: none; }
 
-header { /* position: fixed; top: 0; */ background-image: linear-gradient(to top, rgba(2, 1, 34, 0), 30%, #020122); min-height: 100px; height: 20vh; width: 100%; max-width: 100vw; display: flex; align-items: center; justify-content: space-between; }
+header { /* position: fixed;
+top: 0; */ background-image: linear-gradient(to top, rgba(2, 1, 34, 0), 30%, #020122); min-height: 100px; height: 20vh; width: 100%; max-width: 100vw; display: flex; align-items: center; justify-content: space-between; }
 
 .invisible { opacity: 0; }
 
@@ -36,13 +37,8 @@ header { position: fixed; top: 0; }
 
 #imgDownArrow { height: 20px; width: auto; position: absolute; bottom: 0; animation: slideUp 1s ease-out 1s; }
 
-@keyframes slideUp { 0% { opacity: 0;
-    transform: translateY(100px); }
-  100% { opacity: 1;
-    transform: translateY(0%); } }
-
+@keyframes slideUp { 0% { opacity: 0; transform: translateY(100px); }
+  100% { opacity: 1; transform: translateY(0%); } }
 #sectionAbout { background-color: #020122; height: fit-content; padding: 5vh 20vw; }
 
 .pAbout { font-size: 2em; line-height: 1.5; }
-
-/*# sourceMappingURL=styles.css.map */
