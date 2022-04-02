@@ -1,10 +1,37 @@
 #sectionAbout {
     background-color: #020122;
-    height: fit-content;
-    padding: 5vh 20vw;
+    min-height: 100vh;
+    max-height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto;
+    grid-template-areas: "header header"
+                         "aboutInfo picture"
+}
+
+#h2AboutMeHeader {
+    grid-area: header;
+    margin: 2% 0;
+}
+
+#pAboutInfo {
+    grid-area: aboutInfo;
+    text-align: justify;
+    font-size: 1.3rem;
 }
 
 .pAbout {
-    font-size: 2em;
     line-height: 1.5;
+}
+
+#imgStandingPictureWrapper {
+    grid-area: picture;
+    display: flex;
+    justify-content: right;
+    height: 80vh;
+}
+
+#imgStandingPicture {
+    height: 100%;
+    width: auto;
 }

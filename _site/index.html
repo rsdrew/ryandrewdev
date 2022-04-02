@@ -6,35 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/css/styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/styling.js"></script>
+    <script type="text/javascript" src="/assets/js/intro.js"></script>
+    <script type="text/javascript" src="/assets/js/contact.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#020122">
+    <meta name="theme-color" content="#d95c1a">
     <title>Ryan Drew</title>
 </head>
 <body>
     <section id="sectionHeader">
-        <header>
-    <img id='imgProfilePicture' src='../assets/images/profilePicture.png'>
-    <button id="btnContact">CONTACT</button>
-</header>
+    <header>
+        <img id='imgProfilePicture' src='../assets/images/profilePicture.png'>
+        <a href="#contact">
+            <button id="btnContact">CONTACT</button>
+        </a>
+    </header>
+</section>
 <div style="height: 20vh;"></div>
-    </section>
     <section id="sectionIntro">
-        <h1 id="h1HiImRyan" class="invisible">Hi, I'm Ryan.</h1>
-<h2 id="h2ShortDescription" class="invisible">I'm a full-stack software developer.</h2>
-<h3 id="h3ScrollDown" class="invisible">Scroll down to learn more about me.</h3>
-<img id="imgDownArrow" class="invisible" src="/assets/images/whiteDownArrow.png">
-    </section>
+    <h1 id="h1HiImRyan" class="invisible">Hi, I'm Ryan.</h1>
+    <h2 id="h2ShortDescription" class="invisible">I'm a full-stack software developer.</h2>
+    <h3 id="h3ScrollDown" class="invisible">Scroll down to learn more about me.</h3>
+    <img id="imgDownArrow" class="invisible" src="/assets/images/whiteDownArrow.png">
+</section>
     <section id="sectionAbout">
-    <p class="pAbout">My name is Ryan Drew. I recently graduated from the University of Michigan with a degree in, you guessed it, Computer Science.
+    <h2 id="h2AboutMeHeader">About Me</h2>
+    <div id="pAboutInfo">
+        <p class="pAbout">
+            My name is Ryan Drew. I recently graduated from the University of Michigan with a degree in, you guessed it, Computer Science.
         </p>
-    <p class="pAbout">
-        I'm currently employed as a full-stack software developer at McCreadieGroup Inc., a business local to the Ann Arbor area that hosts websites for the research of investigational drugs.
-    </p>
-    <p class="pAbout">
-        However, I am also open to freelance work during my off-hours. Take a look at the projects I've worked on below, and reach out if you'd like me to make a website for you!
-    </p>
-    <p class="pAbout">
-        Thanks for visiting!
-    </p>
+        <p class="pAbout">
+            I'm currently employed as a full-stack software developer at McCreadieGroup Inc., a business local to the Ann Arbor area that hosts websites for the research of investigational drugs.
+        </p>
+        <p class="pAbout">
+            However, I am also open to freelance work during my off-hours. Take a look at the projects I've worked on below, and reach out if you'd like me to make a website for you!
+        </p>
+        <p class="pAbout">
+            Thanks for visiting!
+        </p>
+    </div>
+    <div id="imgStandingPictureWrapper">
+        <img id="imgStandingPicture" src="/assets/images/standingPerson.png">
+    </div>
+</section>
+    <section id="sectionProjects">
+    <h2>Projects</h2>
+    
+        <div class="project">
+            <div class="projectImgAndButton">
+                <img class="projectImg" src="/assets/images/wordCounter.png">
+                <div class="overlay invisible"></div>
+                <button class="btnViewProject invisible" onclick="window.open('https://rsdrew.github.io/wordCounter','_blank')">VIEW</button>
+            </div>
+            <div class="projectAboutWrapper">
+                <h3 class="h3ProjectName">
+                    Word Counter
+                </h3>
+                <p class="projectAbout">This is one of my first projects. Here I was able to test my knowledge of the basics: html, css, and javascript. It also taught me about formatting sites for mobile! Go ahead and take a look at this site on your phone!</p>
+            </div>
+        </div>
+
+    
+        <div class="project">
+            <div class="projectImgAndButton">
+                <img class="projectImg" src="/assets/images/tonyAwards2016.png">
+                <div class="overlay invisible"></div>
+                <button class="btnViewProject invisible" onclick="window.open('https://rsdrew.github.io/tonyAwards2016','_blank')">VIEW</button>
+            </div>
+            <div class="projectAboutWrapper">
+                <h3 class="h3ProjectName">
+                    Tony Awards 2016
+                </h3>
+                <p class="projectAbout">This was an early project done in school. The main focus of this site was learning about flexbox. Try resizing the page and see how the different nominees properly wrap to the next line.</p>
+            </div>
+        </div>
+
+    
+        <div class="project">
+            <div class="projectImgAndButton">
+                <img class="projectImg" src="/assets/images/promiseZone.png">
+                <div class="overlay invisible"></div>
+                <button class="btnViewProject invisible" onclick="window.open('https://drewryanrd.wixsite.com/promise-zone','_blank')">VIEW</button>
+            </div>
+            <div class="projectAboutWrapper">
+                <h3 class="h3ProjectName">
+                    Hazel Park Schools Promise Zone
+                </h3>
+                <p class="projectAbout">This site was made using Wix.com, a drag-and-drop website builder. Although it never ended up going live, it was a project I had worked on to learn more about Wix. Wix makes it easier for clients to make small edits to their site long after it has been created without the need of the original developer.</p>
+            </div>
+        </div>
+
+    
+        <div class="project">
+            <div class="projectImgAndButton">
+                <img class="projectImg" src="/assets/images/bandSite.png">
+                <div class="overlay invisible"></div>
+                <button class="btnViewProject invisible" onclick="window.open('https://ryan-haley-experience.herokuapp.com/','_blank')">VIEW</button>
+            </div>
+            <div class="projectAboutWrapper">
+                <h3 class="h3ProjectName">
+                    Band Website
+                </h3>
+                <p class="projectAbout">This website is for the band I'm in, and is currently under construction. This site uses node.js and express.js for the backend, and Heroku for hosting. (Please note, the pictures on the site are just placeholders. They are not the actual members!)</p>
+            </div>
+        </div>
+
+    
+</section>
+    <section id="contact">
+    <h2>Contact</h2>
+    <form id="formContact" action="https://formspree.io/f/xjvlejrj" method="POST">
+        <div id="nameWrapper">
+            <label id="lblName" for="name">Name:</label>
+            <input type="text" id="txtName" name="name">
+        </div>
+        <div id="emailWrapper">
+            <label id="lblEmail" for="email">Email:</label>
+            <input type="email" id="txtEmail" name="email">
+        </div>
+        <div id="messageWrapper">
+            <label id="lblMessage" for="message">Message:</label>
+            <textarea id="txtMessage" name="message"></textarea>
+        </div>
+        <div id="btnWrapper">
+            <button type="submit" id="btnSend">Send</button>
+        </div>
+        <p id="successMessage" class="hidden">
+            I got your message! Thanks for reaching out, I'll get back to you as soon as possible!
+        </div>
+    </form>
 </section>
 </body>
 </html>
