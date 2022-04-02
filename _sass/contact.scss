@@ -1,0 +1,103 @@
+#contact {
+    height: fit-content;
+    background-color: var(--secondaryColor);
+}
+
+#formContact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "name email"
+                         "message message"
+                         "button button"
+                         "successMessage successMessage";
+    text-align: left;
+    gap: 30px;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+input, textarea {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+input {
+    height: 4ch;
+}
+
+textarea {
+    height: 15ch;
+    resize: none;
+    font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+#nameWrapper {
+    grid-area: name;
+    display: grid;
+    grid-template-areas: "title"
+                         "textbox";
+}
+
+#nameWrapper > #lblName {
+    grid-area: title;
+}
+
+#nameWrapper > #txtName {
+    grid-area: textbox;
+}
+
+#emailWrapper {
+    grid-area: email;
+    display: grid;
+    grid-template-areas: "title"
+                         "textbox";
+}
+
+#emailWrapper > #lblEmail {
+    grid-area: title;
+}
+
+#emailWrapper > #txtEmail {
+    grid-area: textbox;
+}
+
+#messageWrapper {
+    grid-area: message;
+    display: grid;
+    grid-template-areas: "title"
+                         "textbox";
+}
+
+#messageWrapper > #lblMessage {
+    grid-area: title;
+}
+
+#messageWrapper > #txtMessage {
+    grid-area: textbox;
+}
+
+#btnWrapper {
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+}
+
+#btnSend {
+
+}
+
+#successMessage {
+    grid-area: successMessage;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    height: 6ch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 0;
+}

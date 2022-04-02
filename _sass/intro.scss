@@ -1,13 +1,12 @@
 #sectionIntro {
     height: 80vh;
-    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
 #h1HiImRyan {
-    font-size: 10em;
+    margin-top: 8%;
     animation: slideUp 1s ease-out;
 }
 
@@ -17,6 +16,7 @@
 }
 
 #h3ScrollDown {
+    font-size: 1rem;
     position: absolute;
     bottom: 20px;
     margin-bottom: 0;

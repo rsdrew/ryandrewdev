@@ -5,16 +5,16 @@ $(document).ready(function() {
 
 function showText() {
     setTimeout(function () {
-        $("#h1HiImRyan").removeClass('hide');
+        $("#h1HiImRyan").removeClass('invisible');
     }, 500);
 
     setTimeout(function () {
-        $("#h2ShortDescription").removeClass('hide');
+        $("#h2ShortDescription").removeClass('invisible');
     }, 1000);
 
     setTimeout(function () {
-        $("#h3ScrollDown").removeClass('hide');
-        $("#imgDownArrow").removeClass('hide');
+        $("#h3ScrollDown").removeClass('invisible');
+        $("#imgDownArrow").removeClass('invisible');
     }, 2000)
 }
 
@@ -30,12 +30,12 @@ function projectImageOnHover() {
 
         projectImgAndButton.hover(
             () => { // hover
-                overlay.removeClass('hide');
-                btnViewProject.removeClass('hide');
+                overlay.removeClass('invisible');
+                btnViewProject.removeClass('invisible');
             },
             () => { // out
-                overlay.addClass('hide');
-                btnViewProject.addClass('hide');
+                overlay.addClass('invisible');
+                btnViewProject.addClass('invisible');
             }
         )
     }
