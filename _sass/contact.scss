@@ -101,3 +101,13 @@ textarea {
     border-radius: 5px;
     margin: 0;
 }
+
+@media screen and (max-width: 800px) {
+    #formContact {
+        grid-template-areas: "name"
+                             "email"
+                             "message"
+                             "button"
+                             "successMessage";
+    }
+}

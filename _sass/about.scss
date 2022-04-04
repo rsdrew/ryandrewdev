@@ -6,12 +6,12 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content auto;
     grid-template-areas: "header header"
-                         "aboutInfo picture"
+                         "aboutInfo picture";
 }
 
 #h2AboutMeHeader {
     grid-area: header;
-    margin: 2% 0;
+    margin: 2vh 0;
 }
 
 #pAboutInfo {
@@ -34,4 +34,23 @@
 #imgStandingPicture {
     height: 100%;
     width: auto;
+}
+
+@media screen and (max-width: 800px) {
+    #sectionAbout {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "header"
+                             "picture"
+                             "aboutInfo";
+    }
+    
+    #imgStandingPictureWrapper {
+        justify-content: center;
+        height: 40vh;
+    }
+
+    #pAboutInfo {
+        font-size: 1rem;
+    }
 }
