@@ -1,19 +1,19 @@
 - name: Word Counter
   link: https://rsdrew.github.io/wordCounter
-  image: wordCounter.png
+  image: wordCounter.jpg
   about: "This is one of my first projects. Here I was able to test my knowledge of the basics: html, css, and javascript. It also taught me about formatting sites for mobile! Go ahead and take a look at this site on your phone!"
 
 - name: Tony Awards 2016
   link: https://rsdrew.github.io/tonyAwards2016
-  image: tonyAwards2016.png
+  image: tonyAwards2016.jpg
   about: This was an early project done in school. The main focus of this site was learning about flexbox. Try resizing the page and see how the different nominees properly wrap to the next line.
 
 - name: Hazel Park Schools Promise Zone
   link: https://drewryanrd.wixsite.com/promise-zone
-  image: promiseZone.png
+  image: promiseZone.jpg
   about: This site was made using Wix.com, a drag-and-drop website builder. Although it never ended up going live, it was a project I had worked on to learn more about Wix. Wix makes it easier for clients to make small edits to their site long after it has been created without the need of the original developer.
 
 - name: Band Website
   link: https://ryan-haley-experience.herokuapp.com/
-  image: bandSite.png
+  image: bandSite.jpg
   about: This website is for the band I'm in, and is currently under construction. This site uses node.js and express.js for the backend, and Heroku for hosting. (Please note, the pictures on the site are just placeholders. They are not the actual members!)
