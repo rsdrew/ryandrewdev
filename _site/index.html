@@ -120,23 +120,23 @@
     <section id="contact">
     <h2>Contact</h2>
     <form id="formContact" action="https://formspree.io/f/xjvlejrj" method="POST">
-        <div id="nameWrapper">
+        <div id="nameWrapper" class="formControlWrapper">
             <label id="lblName" for="name">Name:</label>
             <input type="text" id="txtName" name="name">
+            <div id="rfvName" class="required hidden">Please enter your name</div>
         </div>
-        <div id="emailWrapper">
+        <div id="emailWrapper" class="formControlWrapper">
             <label id="lblEmail" for="email">Email:</label>
             <input type="email" id="txtEmail" name="email">
+            <div id="rfvEmail" class="required hidden">Please enter a valid email address</div>
         </div>
-        <div id="messageWrapper">
+        <div id="messageWrapper" class="formControlWrapper">
             <label id="lblMessage" for="message">Message:</label>
             <textarea id="txtMessage" name="message"></textarea>
+            <div id="rfvMessage" class="required hidden">Please leave a message</div>
         </div>
         <div id="btnWrapper">
             <button type="submit" id="btnSend">Send</button>
-        </div>
-        <p id="successMessage" class="hidden">
-            I got your message! Thanks for reaching out, I'll get back to you as soon as possible!
         </div>
     </form>
 </section>
