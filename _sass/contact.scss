@@ -8,20 +8,21 @@
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "name email"
                          "message message"
-                         "button button"
-                         "successMessage successMessage";
+                         "button button";
     text-align: left;
     gap: 30px;
 }
 
 label {
     margin-bottom: 0.5rem;
+    height: 15px;
 }
 
 input, textarea {
     border-radius: 5px;
     padding: 5px;
     font-size: 1rem;
+    width: 100%;
 }
 
 input {
@@ -34,11 +35,14 @@ textarea {
     font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+.formControlWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 #nameWrapper {
     grid-area: name;
-    display: grid;
-    grid-template-areas: "title"
-                         "textbox";
 }
 
 #nameWrapper > #lblName {
@@ -49,11 +53,12 @@ textarea {
     grid-area: textbox;
 }
 
+#nameWrapper > #rfvName {
+    grid-area: rfv;
+}
+
 #emailWrapper {
     grid-area: email;
-    display: grid;
-    grid-template-areas: "title"
-                         "textbox";
 }
 
 #emailWrapper > #lblEmail {
@@ -64,19 +69,12 @@ textarea {
     grid-area: textbox;
 }
 
+#emailWrapper > #rfvEmail {
+    grid-area: rfv;
+}
+
 #messageWrapper {
     grid-area: message;
-    display: grid;
-    grid-template-areas: "title"
-                         "textbox";
-}
-
-#messageWrapper > #lblMessage {
-    grid-area: title;
-}
-
-#messageWrapper > #txtMessage {
-    grid-area: textbox;
 }
 
 #btnWrapper {
@@ -85,21 +83,19 @@ textarea {
     justify-content: center;
 }
 
-#btnSend {
-
-}
-
-#successMessage {
-    grid-area: successMessage;
-    color: #155724;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    height: 6ch;
+.required {
+    color: #fff;
+    background-color: #9590A8;
+    border-color: #f5c6cb;
+    height: 4ch;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    margin: 0;
+    margin-top: 5px;
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
 }
 
 @media screen and (max-width: 800px) {
@@ -107,7 +103,8 @@ textarea {
         grid-template-areas: "name"
                              "email"
                              "message"
-                             "button"
-                             "successMessage";
+                             "button";
+
+        grid-template-columns: 1fr;
     }
 }
