@@ -10,7 +10,7 @@
                          "message message"
                          "button button";
     text-align: left;
-    gap: 30px;
+    gap: 5px 30px;
 }
 
 label {
@@ -83,7 +83,7 @@ textarea {
     justify-content: center;
 }
 
-.required {
+.rfv {
     color: #fff;
     background-color: #9590A8;
     border-color: #f5c6cb;
@@ -96,6 +96,7 @@ textarea {
     width: 100%;
     font-size: 15px;
     padding: 5px;
+    opacity: 0;
 }
 
 @media screen and (max-width: 800px) {
@@ -106,5 +107,29 @@ textarea {
                              "button";
 
         grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(5px);
     }
 }

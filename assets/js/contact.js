@@ -6,13 +6,15 @@ $(document).ready(function () {
 });
 
 function formControlChange(controlName) {
-    $(`#rfv${controlName}`).addClass('hidden');
+    $(`#rfv${controlName}`).css({'animation':'fadeOut .25s ease-in-out',
+                                 'animation-fill-mode':'forwards'});
 }
 
 function hideErrorMessages() {
-    $('#rfvName').addClass('hidden');
-    $('#rfvEmail').addClass('hidden');
-    $('#rfvMessage').addClass('hidden');
+    $('.rfv').each(function(i, obj) {
+        obj.style.animation = 'fadeOut .25s ease-in-out';
+        obj.style.animationFillMode = 'forwards';
+    });
 }
 
 function validateEmail(emailAdress) {
@@ -26,18 +28,19 @@ function validateEmail(emailAdress) {
 
 function validateContactForm(event) {
     let valid = true;
-    if ($('#txtName').val() === "") {
-        $('#rfvName').removeClass('hidden');
-        valid = false;
-    }
+
+    $('.contactFormInput').each(function(i, obj) {
+        if (obj.value === "") {
+            let rfv = $(`#rfv${obj.id.substring(3)}`)
+            rfv.css({'animation':'fadeIn .25s ease-in-out',
+                     'animation-fill-mode':'forwards'});
+            valid = false;
+        }
+    });
 
     if (!validateEmail($('#txtEmail').val())) {
-        $('#rfvEmail').removeClass('hidden');
-        valid = false;
-    }
-
-    if ($('#txtMessage').val() === "") {
-        $('#rfvMessage').removeClass('hidden');
+        $('#rfvEmail').css({'animation':'fadeIn .25s ease-in-out',
+                            'animation-fill-mode':'forwards'});
         valid = false;
     }
 
@@ -50,7 +53,6 @@ function clearForm() {
     $('#txtName').val('');
     $('#txtEmail').val('');
     $('#txtMessage').val('');
-    $('#successMessage').removeClass('hidden');
 }
 
 function btnSend_Click(event) {
