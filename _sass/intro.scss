@@ -1,35 +1,62 @@
 #sectionIntro {
-    height: 83vh;
+    height: 100vh;
+    padding-top: 20vh;
+    padding-bottom: 0;
+    background-color: var(--primaryColor);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "name picture";
+}
+
+#nameAndInfo {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    grid-area: name;
 }
 
 #h1HiImRyan {
-    margin-top: 8%;
+    margin: 0;
     animation: slideUp 1s ease-out;
 }
 
-#h2ShortDescription {
-    font-size: 2em;
+#h1HiImRyan > * {
+    font-size: 84px;
+}
+
+#name {
+    color: var(--secondaryColor);
+}
+
+#shortDescription {
+    font-size: 1.563rem;
+    flex-grow: 1;
     animation: slideUp 1s ease-out .5s;
 }
 
-#h3ScrollDown {
-    font-size: 1rem;
-    position: absolute;
-    bottom: 20px;
-    margin-bottom: 0;
+#scrollDown {
     animation: slideUp 1s ease-out 1s;
 }
 
 #imgDownArrow {
     height: 20px;
-    width: auto;
-    position: absolute;
-    bottom: 0;
+    width: 20px;
     animation: slideUp 1s ease-out 1s;
 }
+
+#imgStandingPictureWrapper {
+    grid-area: picture;
+    display: flex;
+    justify-content: right;
+    height: 100%;
+}
+
+#imgStandingPicture {
+    height: 100%;
+    width: auto;
+}
+
 
 @keyframes slideUp {
     0% {

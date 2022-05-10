@@ -1,6 +1,6 @@
 :root {
-    --primaryColor: #d95c1a;
-    --secondaryColor: #020122;
+    --primaryColor: #301934;
+    --secondaryColor: #3C7D78;
   }
 
   *{
@@ -10,12 +10,11 @@
   html, body {
     padding: 0;
     margin: 0;
-    font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 16px "Lucida Grande", Helvetica, Arial, sans-serif;
     /*overflow: hidden;*/
     color: white;
     height: fit-content;
     width: 100%;
-    background-color: #d95c1a;
     scroll-behavior: smooth;
     text-align: center;
   }
@@ -29,35 +28,37 @@
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #9590A8;
+    background: var(--secondaryColor);
   }
 
   h1, h2, h3, h4, h5, h6 {
     margin: 2vh 0;
   }
 
-  h1 {font-size: 10vw;}
-  h2 {font-size: 6vw;}
-  h3 {font-size: 4vw;}
-  h4 {font-size: 3vw;}
-  h5 {font-size: 2vw;}
-  h6 {font-size: 1vw;}
+  h1 {font-size: 3.052rem;}
+  h2 {font-size: 2.441rem;}
+  h3 {font-size: 1.953rem;}
+  h4 {font-size: 1.563rem;}
+  h5 {font-size: 1.25rem;}
+  h6 {font-size: 1rem;}
 
   @media screen and (max-width: 800px) {
-    h1 {font-size: 4rem;}
-    h2 {font-size: 2rem;}
-    h3 {font-size: 1rem;}
-    h4 {font-size: 1rem;}
-    h5 {font-size: 1rem;}
+    h1 {font-size: 3.052rem;}
+    h2 {font-size: 2.441rem;}
+    h3 {font-size: 1.953rem;}
+    h4 {font-size: 1.563rem;}
+    h5 {font-size: 1.25rem;}
     h6 {font-size: 1rem;}
   }
   section {
-    padding: 5% 14%;
+    padding: 5% 10vw;
   }
   
   a {
     color: #00B7FF;
   }
+
+  p {font-size: 16px;}
   
   button {
     font-size: 16px;
@@ -65,12 +66,12 @@
     font-weight: 700 !important;
     text-transform: uppercase;
     background: transparent;
-    color: #9590A8;
+    color: var(--secondaryColor);
     padding: 23px 50px;
     text-align: center;
     display: inline-block !important;
     text-decoration: none;
-    border: 3px solid #9590A8;
+    border: 3px solid var(--secondaryColor);
     width: max-content;
     cursor: pointer;
     transition: all 0.3s 0s ease-in-out;
@@ -78,7 +79,7 @@
   }
   
   button:hover {
-    background-color: #9590A8;
+    background-color:var(--secondaryColor);
     color: white;
     text-decoration: none;
   }

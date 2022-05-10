@@ -1,5 +1,4 @@
 #sectionAbout {
-    background-color: #020122;
     min-height: 100vh;
     max-height: fit-content;
     display: grid;
@@ -22,18 +21,6 @@
 
 .pAbout {
     line-height: 1.5;
-}
-
-#imgStandingPictureWrapper {
-    grid-area: picture;
-    display: flex;
-    justify-content: right;
-    height: 80vh;
-}
-
-#imgStandingPicture {
-    height: 100%;
-    width: auto;
 }
 
 @media screen and (max-width: 800px) {

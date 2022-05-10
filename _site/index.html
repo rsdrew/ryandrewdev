@@ -23,18 +23,25 @@
 <body>
     <section id="sectionHeader">
     <header>
-        <img id='imgLogo' src='../assets/images/ryanDrewLogo.png'>
+        <img id='imgLogo' src='../assets/images/ryanDrewLogoSecondary.svg'>
         <a href="#contact">
             <button id="btnContact">CONTACT</button>
         </a>
     </header>
 </section>
-<div style="height: 17vh;"></div>
     <section id="sectionIntro">
-    <h1 id="h1HiImRyan" class="invisible">Hi, I'm Ryan.</h1>
-    <h2 id="h2ShortDescription" class="invisible">I'm a full-stack software developer.</h2>
-    <h3 id="h3ScrollDown" class="invisible">Scroll down to learn more about me.</h3>
-    <img id="imgDownArrow" class="invisible" src="/assets/images/whiteDownArrow.png">
+    <div id="nameAndInfo">
+        <div id="h1HiImRyan" class="invisible">
+            <h1>Hi,</h1>
+            <h1>I'm <span id="name">Ryan</span></h1>
+        </div>
+        <h2 id="shortDescription" class="invisible">I'm a full-stack software developer.</h2>
+        <p id="scrollDown" class="invisible">Scroll down to learn more about me.</p>
+        <img id="imgDownArrow" class="invisible" src="/assets/images/whiteDownArrow.png">
+    </div>
+    <div id="imgStandingPictureWrapper">
+        <img id="imgStandingPicture" src="/assets/images/standingPersonCropped.png">
+    </div>
 </section>
     <section id="sectionAbout">
     <h2 id="h2AboutMeHeader">About Me</h2>
@@ -51,9 +58,6 @@
         <p class="pAbout">
             Thanks for visiting!
         </p>
-    </div>
-    <div id="imgStandingPictureWrapper">
-        <img id="imgStandingPicture" src="/assets/images/standingPerson.png">
     </div>
 </section>
     <section id="sectionProjects">
