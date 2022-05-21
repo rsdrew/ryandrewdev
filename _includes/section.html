@@ -1,0 +1,10 @@
+<div id="{{ include.name }}HeaderWrapper" class="centerContent">
+    <div id="{{ include.name }}HeaderBackground" class="sectionHeaderBackground">
+        <h2 id="{{ include.name }}HeaderText">{{ include.title }}</h2>
+    </div>
+</div>
+<div class="sectionPadding centerContent pageHeight">
+    <div class="restrictWidth">
+        {% include {{include.content}} %}
+    </div>
+</div>

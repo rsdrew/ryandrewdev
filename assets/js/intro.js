@@ -15,7 +15,7 @@ function showText() {
     setTimeout(function () {
         $("#scrollDown").removeClass('invisible');
         $("#imgDownArrow").removeClass('invisible');
-    }, 2000)
+    }, 1500)
 }
 
 function projectImageOnHover() {
