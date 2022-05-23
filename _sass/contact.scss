@@ -1,6 +1,6 @@
 #contact {
-    height: fit-content;
     background-color: var(--primaryColor);
+    padding-bottom: var(--sectionTitleOffset);
 }
 
 #formContact {
@@ -85,8 +85,7 @@ textarea {
 
 .rfv {
     color: #fff;
-    background-color: #9590A8;
-    border-color: #f5c6cb;
+    background-color: var(--secondaryColor);
     height: 4ch;
     display: flex;
     align-items: center;

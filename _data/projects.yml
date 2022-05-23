@@ -17,3 +17,8 @@
   link: https://ryan-haley-experience.herokuapp.com/
   image: bandSite.jpg
   about: This website is for the band I'm in, and is currently under construction. This site uses node.js and express.js for the backend, and Heroku for hosting. (Please note, the pictures on the site are just placeholders. They are not the actual members!)
+
+- name: Flavortown
+  link: https://flavortown493.herokuapp.com/
+  image: flavortown.jpg
+  about: "Flavortown is a recipe sharing website that I created for a class project. The main feature of this site is allowing users to login. I learned a lot about account security, connecting to a database, and allowing users to upload their own content. Feel free to explore our list of recipes, create your own account, and upload your favorite dish!"

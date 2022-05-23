@@ -1,26 +1,20 @@
-<section id="contact">
-    <div class="sectionHeaderBackground" id="contactHeaderBackground">
-        <h2 id="h2ContactMeHeader">Contact Me</h2>
+<form id="formContact" action="https://formspree.io/f/xjvlejrj" method="POST">
+    <div id="nameWrapper" class="formControlWrapper">
+        <label id="lblName" for="name">Name:</label>
+        <input type="text" id="txtName" class="contactFormInput shadow" name="name">
+        <div id="rfvName" class="rfv shadow">Please enter your name</div>
     </div>
-    <h2>Contact</h2>
-    <form id="formContact" action="https://formspree.io/f/xjvlejrj" method="POST">
-        <div id="nameWrapper" class="formControlWrapper">
-            <label id="lblName" for="name">Name:</label>
-            <input type="text" id="txtName" class="contactFormInput" name="name">
-            <div id="rfvName" class="rfv">Please enter your name</div>
-        </div>
-        <div id="emailWrapper" class="formControlWrapper">
-            <label id="lblEmail" for="email">Email:</label>
-            <input type="email" id="txtEmail" class="contactFormInput"  name="email">
-            <div id="rfvEmail" class="rfv">Please enter a valid email address</div>
-        </div>
-        <div id="messageWrapper" class="formControlWrapper">
-            <label id="lblMessage" for="message">Message:</label>
-            <textarea id="txtMessage" class="contactFormInput"  name="message"></textarea>
-            <div id="rfvMessage" class="rfv">Please leave a message</div>
-        </div>
-        <div id="btnWrapper">
-            <button type="submit" id="btnSend">Send</button>
-        </div>
-    </form>
-</section>
+    <div id="emailWrapper" class="formControlWrapper">
+        <label id="lblEmail" for="email">Email:</label>
+        <input type="email" id="txtEmail" class="contactFormInput shadow"  name="email">
+        <div id="rfvEmail" class="rfv shadow">Please enter a valid email address</div>
+    </div>
+    <div id="messageWrapper" class="formControlWrapper">
+        <label id="lblMessage" for="message">Message:</label>
+        <textarea id="txtMessage" class="contactFormInput shadow"  name="message"></textarea>
+        <div id="rfvMessage" class="rfv shadow">Please leave a message</div>
+    </div>
+    <div id="btnWrapper">
+        <button type="submit" id="btnSend" class="shadow">Send</button>
+    </div>
+</form>
