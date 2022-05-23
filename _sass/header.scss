@@ -1,11 +1,11 @@
 #sectionHeader {
-    padding: 0 10%;
-    background-image: linear-gradient(to top, rgba(2, 1, 34, 0), 30%, rgba(2, 1, 34, 1));
+    padding: 0 1%;
     position: fixed;
     top: 0;
     width: 100%;
-    height: 17vh;
-    z-index: 1;
+    height: var(--headerHeight);
+    z-index: 1000;
+    display: block;
 }
 
 header {

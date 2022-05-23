@@ -1,35 +1,76 @@
 #sectionIntro {
-    height: 83vh;
+    background-color: var(--primaryColor);
+    height: 100vh;
+    width: 100%;
+    padding-top: var(--headerHeight);
+    top: 0px;
+}
+
+#introFlexBox {
     display: flex;
-    align-items: center;
+    justify-content: center;
+}
+
+#introGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "name picture";
+}
+
+#nameAndInfo {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    grid-area: name;
+    height: 100%;
 }
 
 #h1HiImRyan {
-    margin-top: 8%;
+    margin: 50px 0;
     animation: slideUp 1s ease-out;
 }
 
-#h2ShortDescription {
-    font-size: 2em;
+#h1HiImRyan > * {
+    font-size: 84px;
+}
+
+#name {
+    color: var(--secondaryColor);
+}
+
+#shortDescription {
+    font-size: 1.563rem;
+    flex-grow: 1;
     animation: slideUp 1s ease-out .5s;
 }
 
-#h3ScrollDown {
-    font-size: 1rem;
-    position: absolute;
-    bottom: 20px;
-    margin-bottom: 0;
+#scrollDown {
     animation: slideUp 1s ease-out 1s;
+    position: relative;
+    top: -30px;
 }
 
 #imgDownArrow {
     height: 20px;
-    width: auto;
-    position: absolute;
-    bottom: 0;
+    width: 20px;
     animation: slideUp 1s ease-out 1s;
+    position: relative;
+    top: -46px;
 }
+
+#imgStandingPictureWrapper {
+    grid-area: picture;
+    display: flex;
+    justify-content: right;
+    height: 100%;
+}
+
+#imgStandingPicture {
+    height: 100%;
+    width: auto;
+}
+
 
 @keyframes slideUp {
     0% {

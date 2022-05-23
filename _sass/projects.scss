@@ -1,9 +1,16 @@
-#sectionProjects {
+#projects {
+    min-height: fit-content;
+    max-width: 100%;
+}
+
+#projectsFlexbox {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    min-height: fit-content;
-    max-width: 100%;
+}
+
+#projectsFlexbox > .project:nth-child(odd) {
+    align-self: flex-end;
 }
 
 .project {
@@ -13,7 +20,8 @@
     grid-template-areas: "img text";
     height: 400px;
     width: 100%;
-    background-color: var(--secondaryColor);
+    max-width: 1000px;
+    background-color: var(--primaryColor);
     border-radius: 30px;
     overflow: hidden;
 }

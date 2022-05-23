@@ -9,13 +9,13 @@ function showText() {
     }, 500);
 
     setTimeout(function () {
-        $("#h2ShortDescription").removeClass('invisible');
+        $("#shortDescription").removeClass('invisible');
     }, 1000);
 
     setTimeout(function () {
-        $("#h3ScrollDown").removeClass('invisible');
+        $("#scrollDown").removeClass('invisible');
         $("#imgDownArrow").removeClass('invisible');
-    }, 2000)
+    }, 1500)
 }
 
 function projectImageOnHover() {

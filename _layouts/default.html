@@ -23,8 +23,8 @@
 <body>
     {% include header.html %}
     {% include intro.html %}
-    {% include about.html %}
-    {% include projects.html %}
-    {% include contact.html %}
+    {% include section.html name="about" title="About Me" content="about.html" %}
+    {% include section.html name="projects" title="Projects" content="projects.html" %}
+    {% include section.html name="contact" title="Contact Me" content="contact.html" %}
 </body>
 </html>

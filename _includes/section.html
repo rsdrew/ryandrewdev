@@ -1,0 +1,12 @@
+<section id="{{ include.name }}" class="sectionPadding">
+    <div id="{{ include.name }}HeaderWrapper" class="sectionHeaderWrapper centerContent">
+        <div id="{{ include.name }}HeaderBackground" class="sectionHeaderBackground shadow">
+            <h2 id="{{ include.name }}HeaderText">{{ include.title }}</h2>
+        </div>
+    </div>
+    <div class="centerContent">
+        <div class="restrictWidth">
+            {% include {{include.content}} %}
+        </div>
+    </div>
+</section>
