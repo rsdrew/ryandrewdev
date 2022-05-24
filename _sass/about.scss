@@ -1,20 +1,27 @@
 #about {
-    min-height: 100vh;
     height: fit-content;
     width: 100%;
 }
 
-#aboutGrid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "info info info info info info info img1 img1 img1 img1 img1"
-                         "info info info info info info info img2 img2 img2 img2 img2"
-                         "info info info info info info info img3 img3 img3 img3 img3";
+#aboutFlexbox {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
-    height: 100%;
+.aboutBlurb {
     width: 100%;
-    flex-grow: 1;
+    max-width: 1000px;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "img info";
+    gap: 25px;
+}
+
+.aboutBlurb:nth-child(even) {
+    align-self: flex-end;
+    grid-template-areas: "info img";
 }
 
 #aboutInfoBackground {
@@ -30,35 +37,46 @@
     padding: 0;
     margin: 0;
     text-align: left;
+    font-weight: bold;
+    color: black;
+    letter-spacing: normal;
+    line-height: 1.5;
+    grid-area: info;
+    display: flex;
+    align-items: center;
 }
 
 .aboutImg {
     border-radius: 50px;
-    height: 100%;
+    height: 30vh;
     width: 100%;
-    position: relative;
-    left: -3vw;
+    grid-area: img;
+    object-fit: cover;
+    object-position: top;
 }
 
 #img1 {
-    grid-area: img1;
     background-color: darkgrey;
-    z-index: -1;
 }
 
 #img2 {
-    grid-area: img2;
     background-color: grey;
-    left: -1vw;
-    z-index: 2;
 }
 
 #img3 {
-    grid-area: img3;
     background-color: darkgrey;
-    z-index: 0;
 }
 
 @media screen and (max-width: 800px) {
+    .aboutBlurb:nth-child(n) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: "img"
+                             "info";
+    }
 
+    .aboutInfo {
+        justify-content: center;
+        padding: 0 5%;
+    }
 }

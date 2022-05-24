@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function showText() {
     setTimeout(function () {
-        $("#h1HiImRyan").removeClass('invisible');
+        $("#hiImRyan").removeClass('invisible');
     }, 500);
 
     setTimeout(function () {

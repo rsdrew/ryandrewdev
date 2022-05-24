@@ -1,4 +1,4 @@
-:root { --primaryColor: #301934; --secondaryColor: #3C7D78; --headerHeight: 17vh; --sectionTitleHeight: 90px; --sectionTitleOffset: 45px; }
+:root { --primaryColor: #301934; --secondaryColor: #3C7D78; --headerHeight: 17vh; --sectionTitleHeight: 90px; --sectionTitleOffset: 45px; --aboutInfoOffset: 50px; }
 
 * { box-sizing: border-box; }
 
@@ -60,7 +60,7 @@ section { width: 100%; height: fit-content; }
 
 .textShadow { text-shadow: 0 6px 5px black; }
 
-#sectionHeader { padding: 0 1%; position: fixed; top: 0; width: 100%; height: var(--headerHeight); z-index: 1000; display: block; }
+#sectionHeader { background-color: var(--primaryColor); padding: 0 2.5%; top: 0; width: 100%; height: var(--headerHeight); z-index: 1000; display: block; }
 
 header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display: flex; align-items: center; justify-content: space-between; }
 
@@ -68,17 +68,19 @@ header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display
 
 #btnContact { position: relative; z-index: 1; }
 
-#sectionIntro { background-color: var(--primaryColor); height: 100vh; width: 100%; padding-top: var(--headerHeight); top: 0px; }
+#sectionIntro { background-color: var(--primaryColor); height: calc(100vh - var(--headerHeight)); max-height: 100vh; width: 100%; top: 0px; }
 
 #introFlexBox { display: flex; justify-content: center; }
 
-#introGrid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr; grid-template-areas: "name picture"; }
+#introGrid { display: grid; grid-template-columns: 1fr auto; grid-template-rows: 1fr; grid-template-areas: "name picture"; height: calc(100vh - var(--headerHeight)); }
 
 #nameAndInfo { display: flex; flex-direction: column; align-items: center; grid-area: name; height: 100%; }
 
-#h1HiImRyan { margin: 50px 0; animation: slideUp 1s ease-out; }
+#hiImRyan { font-size: 84px; margin: 50px 0; animation: slideUp 1s ease-out; display: grid; grid-template-areas: "hi" "imRyan"; }
 
-#h1HiImRyan > * { font-size: 84px; }
+#hi { grid-area: hi; }
+
+#imRyan { grid-area: imRyan; }
 
 #name { color: var(--secondaryColor); }
 
@@ -88,28 +90,41 @@ header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display
 
 #imgDownArrow { height: 20px; width: 20px; animation: slideUp 1s ease-out 1s; position: relative; top: -46px; }
 
-#imgStandingPictureWrapper { grid-area: picture; display: flex; justify-content: right; height: 100%; }
+#imgStandingPictureWrapper { grid-area: picture; display: flex; justify-content: right; align-items: flex-end; position: relative; }
 
-#imgStandingPicture { height: 100%; width: auto; }
+#imgStandingPicture { object-fit: contain; max-height: 80vh; max-width: 80vw; }
 
 @keyframes slideUp { 0% { opacity: 0; transform: translateY(100px); }
   100% { opacity: 1; transform: translateY(0%); } }
-#about { min-height: 100vh; height: fit-content; width: 100%; }
+@media screen and (max-width: 800px) { #introGrid { grid-template-columns: 1fr; grid-template-rows: 1fr auto; grid-template-areas: "name" "picture"; }
+  #nameAndInfo { gap: 10px; }
+  #hiImRyan { margin: 0; font-size: 3.052rem; grid-template-areas: "hi imRyan"; gap: 12px; }
+  #scrollDown { position: static; margin: 0; }
+  #imgDownArrow { top: -15px; }
+  #imgStandingPictureWrapper { justify-content: center; height: 60vh; }
+  #imgStandingPicture { max-height: 60vh; } }
+#about { height: fit-content; width: 100%; }
 
-#aboutGrid { display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(3, 1fr); grid-template-areas: "info info info info info info info img1 img1 img1 img1 img1" "info info info info info info info img2 img2 img2 img2 img2" "info info info info info info info img3 img3 img3 img3 img3"; height: 100%; width: 100%; flex-grow: 1; }
+#aboutFlexbox { display: flex; flex-direction: column; gap: 50px; }
+
+.aboutBlurb { width: 100%; max-width: 1000px; height: fit-content; display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "img info"; gap: 25px; }
+
+.aboutBlurb:nth-child(even) { align-self: flex-end; grid-template-areas: "info img"; }
 
 #aboutInfoBackground { grid-area: info; background-color: var(--primaryColor); border-radius: 20px; padding: 60px; margin: 60px 0; z-index: 1; }
 
-.aboutInfo { padding: 0; margin: 0; text-align: left; }
+.aboutInfo { padding: 0; margin: 0; text-align: left; font-weight: bold; color: black; letter-spacing: normal; line-height: 1.5; grid-area: info; display: flex; align-items: center; }
 
-.aboutImg { border-radius: 50px; height: 100%; width: 100%; position: relative; left: -3vw; }
+.aboutImg { border-radius: 50px; height: 30vh; width: 100%; grid-area: img; object-fit: cover; object-position: top; }
 
-#img1 { grid-area: img1; background-color: darkgrey; z-index: -1; }
+#img1 { background-color: darkgrey; }
 
-#img2 { grid-area: img2; background-color: grey; left: -1vw; z-index: 2; }
+#img2 { background-color: grey; }
 
-#img3 { grid-area: img3; background-color: darkgrey; z-index: 0; }
+#img3 { background-color: darkgrey; }
 
+@media screen and (max-width: 800px) { .aboutBlurb:nth-child(n) { grid-template-columns: 1fr; grid-template-rows: auto 1fr; grid-template-areas: "img" "info"; }
+  .aboutInfo { justify-content: center; padding: 0 5%; } }
 #projects { min-height: fit-content; max-width: 100%; }
 
 #projectsFlexbox { display: flex; flex-direction: column; gap: 50px; }

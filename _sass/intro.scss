@@ -1,8 +1,8 @@
 #sectionIntro {
     background-color: var(--primaryColor);
-    height: 100vh;
+    height: calc(100vh - var(--headerHeight));
+    max-height: 100vh;
     width: 100%;
-    padding-top: var(--headerHeight);
     top: 0px;
 }
 
@@ -13,9 +13,10 @@
 
 #introGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr auto;
     grid-template-rows: 1fr;
     grid-template-areas: "name picture";
+    height: calc(100vh - var(--headerHeight));
 }
 
 #nameAndInfo {
@@ -26,13 +27,21 @@
     height: 100%;
 }
 
-#h1HiImRyan {
+#hiImRyan {
+    font-size: 84px;
     margin: 50px 0;
     animation: slideUp 1s ease-out;
+    display: grid;
+    grid-template-areas: "hi"
+                         "imRyan";
 }
 
-#h1HiImRyan > * {
-    font-size: 84px;
+#hi {
+    grid-area: hi;
+}
+
+#imRyan {
+    grid-area: imRyan;
 }
 
 #name {
@@ -63,12 +72,14 @@
     grid-area: picture;
     display: flex;
     justify-content: right;
-    height: 100%;
+    align-items: flex-end;
+    position: relative;
 }
 
 #imgStandingPicture {
-    height: 100%;
-    width: auto;
+    object-fit: contain;
+    max-height: 80vh;
+    max-width: 80vw;
 }
 
 
@@ -81,5 +92,43 @@
     100% {
         opacity: 1;
         transform: translateY(0%);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #introGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "name"
+                             "picture";
+    }
+
+    #nameAndInfo {
+        gap: 10px;
+    }
+
+    #hiImRyan {
+        margin: 0;
+        font-size: 3.052rem;
+        grid-template-areas: "hi imRyan";
+        gap: 12px;
+    }
+
+    #scrollDown {
+        position: static;
+        margin: 0;
+    }
+
+    #imgDownArrow {
+        top: -15px;
+    }
+
+    #imgStandingPictureWrapper {
+        justify-content: center;
+        height: 60vh;
+    }
+
+    #imgStandingPicture {
+        max-height: 60vh;
     }
 }
