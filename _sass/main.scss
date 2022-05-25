@@ -147,3 +147,21 @@ section {
 .textShadow {
   text-shadow: 0 6px 5px black;
 }
+
+.jsSlideInAnimation {
+  transform: translateY(150px);
+  animation: jsSlideInAnimation 1.5s ease forwards;
+}
+
+.jsSlideInAnimation:nth-child(odd) {
+  animation-duration: 1s; /* So they look staggered */
+}
+
+@keyframes jsSlideInAnimation {
+  to { transform: translateY(0); }
+}
+
+.jsAlreadyVisible {
+  transform: translateY(0);
+  animation: none;
+}

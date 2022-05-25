@@ -60,6 +60,13 @@ section { width: 100%; height: fit-content; }
 
 .textShadow { text-shadow: 0 6px 5px black; }
 
+.jsSlideInAnimation { transform: translateY(150px); animation: jsSlideInAnimation 1.5s ease forwards; }
+
+.jsSlideInAnimation:nth-child(odd) { animation-duration: 1s; /* So they look staggered */ }
+
+@keyframes jsSlideInAnimation { to { transform: translateY(0); } }
+.jsAlreadyVisible { transform: translateY(0); animation: none; }
+
 #sectionHeader { background-color: var(--primaryColor); padding: 0 2.5%; top: 0; width: 100%; height: var(--headerHeight); z-index: 1000; display: block; }
 
 header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display: flex; align-items: center; justify-content: space-between; }
@@ -77,6 +84,8 @@ header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display
 #nameAndInfo { display: flex; flex-direction: column; align-items: center; grid-area: name; height: 100%; }
 
 #hiImRyan { font-size: 84px; margin: 50px 0; animation: slideUp 1s ease-out; display: grid; grid-template-areas: "hi" "imRyan"; }
+
+#hiImRyan > h1 { font-size: 84px; }
 
 #hi { grid-area: hi; }
 
@@ -98,7 +107,8 @@ header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display
   100% { opacity: 1; transform: translateY(0%); } }
 @media screen and (max-width: 800px) { #introGrid { grid-template-columns: 1fr; grid-template-rows: 1fr auto; grid-template-areas: "name" "picture"; }
   #nameAndInfo { gap: 10px; }
-  #hiImRyan { margin: 0; font-size: 3.052rem; grid-template-areas: "hi imRyan"; gap: 12px; }
+  #hiImRyan { margin: 0; grid-template-areas: "hi imRyan"; gap: 12px; }
+  #hiImRyan > h1 { font-size: 3.052rem; }
   #scrollDown { position: static; margin: 0; }
   #imgDownArrow { top: -15px; }
   #imgStandingPictureWrapper { justify-content: center; height: 60vh; }
@@ -115,7 +125,7 @@ header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display
 
 .aboutInfo { padding: 0; margin: 0; text-align: left; font-weight: bold; color: black; letter-spacing: normal; line-height: 1.5; grid-area: info; display: flex; align-items: center; }
 
-.aboutImg { border-radius: 50px; height: 30vh; width: 100%; grid-area: img; object-fit: cover; object-position: top; }
+.aboutImg { border-radius: 20px; height: 30vh; width: 100%; grid-area: img; object-fit: cover; object-position: top; }
 
 #img1 { background-color: darkgrey; }
 
@@ -127,27 +137,25 @@ header { min-height: 100px; height: 17vh; max-width: 100vw; width: 100%; display
   .aboutInfo { justify-content: center; padding: 0 5%; } }
 #projects { min-height: fit-content; max-width: 100%; }
 
-#projectsFlexbox { display: flex; flex-direction: column; gap: 50px; }
+#projectsFlexbox { display: flex; flex-wrap: wrap; flex-direction: row; justify-content: space-evenly; align-items: stretch; align-content: flex-start; gap: 50px; }
 
-#projectsFlexbox > .project:nth-child(odd) { align-self: flex-end; }
-
-.project { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; grid-template-areas: "img text"; height: 400px; width: 100%; max-width: 1000px; background-color: var(--primaryColor); border-radius: 30px; overflow: hidden; }
+.project { display: grid; grid-template-columns: 1fr; grid-template-rows: fit-content(100px) 150px auto; grid-template-areas: "name" "img" "about"; height: 400px; width: 400px; background-color: var(--primaryColor); border-radius: 20px; }
 
 .projectImgAndButton { grid-area: img; position: relative; width: 100%; height: 100%; }
 
 .overlay { background-color: rgba(0, 0, 0, 0.5); position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: all 0.25s ease-in-out; }
 
-.projectImg { overflow: hidden; height: 100%; width: 100%; object-fit: cover; }
+.projectImg { overflow: hidden; height: 100%; width: 100%; object-fit: cover; object-position: top; }
 
 .btnViewProject { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); }
 
-.projectAboutWrapper { grid-area: text; max-width: 100%; max-height: 100%; line-height: 1.5; margin: 5%; overflow-y: auto; overflow-x: hidden; }
+.projectNameWrapper { grid-area: name; display: flex; align-items: center; justify-content: center; background-color: var(--secondaryColor); border-radius: 20px 20px 0 0; }
 
-.h3ProjectName { font-size: 2rem; }
+.projectName { padding: 20px; width: 100%; }
 
-.project:nth-child(even) { grid-template-areas: "text img"; }
+.projectAbout { grid-area: about; margin: 3%; padding: 2%; overflow: hidden; overflow-y: auto; }
 
-@media screen and (max-width: 800px) { .project:nth-child(n) { grid-template-areas: "img" "text"; } }
+@media screen and (max-width: 800px) { .project { width: 100%; } }
 #contact { background-color: var(--primaryColor); padding-bottom: var(--sectionTitleOffset); }
 
 #formContact { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "name email" "message message" "button button"; text-align: left; gap: 5px 30px; }

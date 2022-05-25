@@ -11,6 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/intro.js"></script>
     <script type="text/javascript" src="/assets/js/contact.js"></script>
+    <script type="text/javascript" src="/assets/js/scroll.js"></script>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -57,16 +58,16 @@
         <div class="restrictWidth">
             <div id="aboutFlexbox">
     <div id="aboutBlurb1" class="aboutBlurb">
-        <p id="info1" class="aboutInfo">I graduated as Valedictorian from Hazel Park High School. I was unsure of what I wanted to do professionally, but I sure did love computers. With a blind passion for technology, I decided to apply to the University of Michigan with an intended major of Computer Engineering.</p>
-        <img id="img1" class="aboutImg shadow" src="/assets/images/ryanGraduation.jpg"></img>
+        <p id="info1" class="aboutInfo jsSlideInModule">I graduated as Valedictorian from Hazel Park High School. I was unsure of what I wanted to do professionally, but I sure did love computers. With a blind passion for technology, I decided to apply to the University of Michigan with an intended major of Computer Engineering.</p>
+        <img id="img1" class="aboutImg shadow jsSlideInModule" src="/assets/images/ryanGraduation.jpg"></img>
     </div>
     <div id="aboutBlurb2" class="aboutBlurb">
-        <p id="info2" class="aboutInfo">After arriving at U of M, I quickly fell in love with programming, and I decided to change my major to Computer Science. Over the next four long years, I spent many sleepless nights learning the fundamentals of programming. The best part of all, I eventually discovered my passion for web development.</p>
-        <img id="img2" class="aboutImg shadow" src="/assets/images/ryanUmich.jpg"></img>
+        <p id="info2" class="aboutInfo jsSlideInModule">After arriving at U of M, I quickly fell in love with programming, and I decided to change my major to Computer Science. Over the next four long years, I spent many sleepless nights learning the fundamentals of programming. The best part of all, I eventually discovered my passion for web development.</p>
+        <img id="img2" class="aboutImg shadow jsSlideInModule" src="/assets/images/ryanUmich.jpg"></img>
     </div>
     <div id="aboutBlurb3" class="aboutBlurb">
-        <p id="info3" class="aboutInfo">My class schedule consisted of many web development related courses, so I was really able to improve my skills as a web developer. This eventually led me to landing a job as a Junior Web Developer at McCreadie Group Inc, who provides software to aid in the research of investigational drugs. In my freetime, I continue to work on personal projects so I am constantly learning and improving as a web developer. Check out some of the projects I've worked on below, and thanks for visiting!</p>
-        <div id="img3" class="aboutImg shadow"></div>
+        <p id="info3" class="aboutInfo jsSlideInModule">My class schedule consisted of many web development related courses, so I was really able to improve my skills as a web developer. This eventually led me to landing a job as a Junior Web Developer at McCreadie Group Inc, where I support software that aids in the research of investigational drugs. In my freetime, I continue to work on personal projects so I am constantly learning and improving as a web developer. Check out some of the projects I've worked on below, and thanks for visiting!</p>
+        <img id="img3" class="aboutImg shadow jsSlideInModule" src="/assets/images/ryanMcCreadie.jpg"></img>
     </div>
 </div>
         </div>
@@ -80,7 +81,7 @@
     </div>
     <div class="centerContent">
         <div class="restrictWidth">
-            <div id="projectsFlexbox">
+            <!-- <div id="projectsFlexbox">
     
     <div class="project shadow">
         <div class="projectImgAndButton">
@@ -152,6 +153,70 @@
         </div>
     </div>
 
+</div> -->
+
+<div id="projectsFlexbox">
+    
+    <div class="project shadow jsSlideInModule">
+        <div class="projectNameWrapper">
+            <h3 class="projectName">Word Counter</h3>
+        </div>
+        <div class="projectImgAndButton">
+            <img class="projectImg" src="/assets/images/wordCounter.jpg">
+            <div class="overlay invisible"></div>
+            <button class="btnViewProject invisible" onclick="window.open('https://rsdrew.github.io/wordCounter','_blank')">VIEW</button>
+        </div>
+        <p class="projectAbout">This is one of my first projects. Here I was able to test my knowledge of the basics: html, css, and javascript. It also taught me about formatting sites for mobile! Go ahead and take a look at this site on your phone!</p>
+    </div>
+    
+    <div class="project shadow jsSlideInModule">
+        <div class="projectNameWrapper">
+            <h3 class="projectName">Tony Awards 2016</h3>
+        </div>
+        <div class="projectImgAndButton">
+            <img class="projectImg" src="/assets/images/tonyAwards2016.jpg">
+            <div class="overlay invisible"></div>
+            <button class="btnViewProject invisible" onclick="window.open('https://rsdrew.github.io/tonyAwards2016','_blank')">VIEW</button>
+        </div>
+        <p class="projectAbout">This was an early project done in school. The main focus of this site was learning about flexbox. Try resizing the page and see how the different nominees properly wrap to the next line.</p>
+    </div>
+    
+    <div class="project shadow jsSlideInModule">
+        <div class="projectNameWrapper">
+            <h3 class="projectName">Hazel Park Schools Promise Zone</h3>
+        </div>
+        <div class="projectImgAndButton">
+            <img class="projectImg" src="/assets/images/promiseZone.jpg">
+            <div class="overlay invisible"></div>
+            <button class="btnViewProject invisible" onclick="window.open('https://drewryanrd.wixsite.com/promise-zone','_blank')">VIEW</button>
+        </div>
+        <p class="projectAbout">This site was made using Wix.com, a drag-and-drop website builder. Although it never ended up going live, it was a project I had worked on to learn more about Wix. Wix makes it easier for clients to make small edits to their site long after it has been created without the need of the original developer.</p>
+    </div>
+    
+    <div class="project shadow jsSlideInModule">
+        <div class="projectNameWrapper">
+            <h3 class="projectName">Band Website</h3>
+        </div>
+        <div class="projectImgAndButton">
+            <img class="projectImg" src="/assets/images/bandSite.jpg">
+            <div class="overlay invisible"></div>
+            <button class="btnViewProject invisible" onclick="window.open('https://ryan-haley-experience.herokuapp.com/','_blank')">VIEW</button>
+        </div>
+        <p class="projectAbout">This website is for the band I'm in, and is currently under construction. This site uses node.js and express.js for the backend, and Heroku for hosting. (Please note, the pictures on the site are just placeholders. They are not the actual members!)</p>
+    </div>
+    
+    <div class="project shadow jsSlideInModule">
+        <div class="projectNameWrapper">
+            <h3 class="projectName">Flavortown</h3>
+        </div>
+        <div class="projectImgAndButton">
+            <img class="projectImg" src="/assets/images/flavortown.jpg">
+            <div class="overlay invisible"></div>
+            <button class="btnViewProject invisible" onclick="window.open('https://flavortown493.herokuapp.com/','_blank')">VIEW</button>
+        </div>
+        <p class="projectAbout">Flavortown is a recipe sharing website that I created for a class project. The main feature of this site is allowing users to login. I learned a lot about account security, connecting to a database, and allowing users to upload their own content. Feel free to explore our list of recipes, create your own account, and upload your favorite dish!</p>
+    </div>
+    
 </div>
         </div>
     </div>
@@ -165,23 +230,23 @@
     <div class="centerContent">
         <div class="restrictWidth">
             <form id="formContact" action="https://formspree.io/f/xjvlejrj" method="POST">
-    <div id="nameWrapper" class="formControlWrapper">
+    <div id="nameWrapper" class="formControlWrapper jsSlideInModule">
         <label id="lblName" for="name">Name:</label>
         <input type="text" id="txtName" class="contactFormInput shadow" name="name">
         <div id="rfvName" class="rfv shadow">Please enter your name</div>
     </div>
-    <div id="emailWrapper" class="formControlWrapper">
+    <div id="emailWrapper" class="formControlWrapper jsSlideInModule">
         <label id="lblEmail" for="email">Email:</label>
         <input type="email" id="txtEmail" class="contactFormInput shadow"  name="email">
         <div id="rfvEmail" class="rfv shadow">Please enter a valid email address</div>
     </div>
-    <div id="messageWrapper" class="formControlWrapper">
+    <div id="messageWrapper" class="formControlWrapper jsSlideInModule">
         <label id="lblMessage" for="message">Message:</label>
         <textarea id="txtMessage" class="contactFormInput shadow"  name="message"></textarea>
         <div id="rfvMessage" class="rfv shadow">Please leave a message</div>
     </div>
     <div id="btnWrapper">
-        <button type="submit" id="btnSend" class="shadow">Send</button>
+        <button type="submit" id="btnSend" class="shadow jsSlideInModule">Send</button>
     </div>
 </form>
         </div>

@@ -1,4 +1,4 @@
-<div id="projectsFlexbox">
+<!-- <div id="projectsFlexbox">
     {% for project in site.data.projects %}
     <div class="project shadow">
         <div class="projectImgAndButton">
@@ -14,4 +14,20 @@
         </div>
     </div>
 {% endfor %}
+</div> -->
+
+<div id="projectsFlexbox">
+    {% for project in site.data.projects %}
+    <div class="project shadow jsSlideInModule">
+        <div class="projectNameWrapper">
+            <h3 class="projectName">{{project.name}}</h3>
+        </div>
+        <div class="projectImgAndButton">
+            <img class="projectImg" src="/assets/images/{{ project.image }}">
+            <div class="overlay invisible"></div>
+            <button class="btnViewProject invisible" onclick="window.open('{{ project.link }}','_blank')">VIEW</button>
+        </div>
+        <p class="projectAbout">{{project.about}}</p>
+    </div>
+    {% endfor %}
 </div>

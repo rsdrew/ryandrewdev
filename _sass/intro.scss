@@ -36,6 +36,10 @@
                          "imRyan";
 }
 
+#hiImRyan > h1 {
+    font-size: 84px;
+}
+
 #hi {
     grid-area: hi;
 }
@@ -109,9 +113,12 @@
 
     #hiImRyan {
         margin: 0;
-        font-size: 3.052rem;
         grid-template-areas: "hi imRyan";
         gap: 12px;
+    }
+
+    #hiImRyan > h1 {
+        font-size: 3.052rem;
     }
 
     #scrollDown {
